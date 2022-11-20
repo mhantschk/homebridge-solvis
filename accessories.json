@@ -1,0 +1,14 @@
+"accessories": [
+        {
+            "name": "Außentemperatur",
+            "accessory": "SensMan Volume",
+            "defaulttemp": 90,
+            "xml": "192.168.178.80/sc2_val.xml"
+        },
+        {
+            "name": "Vorlauftemperatur",
+            "accessory": "SensMan Volume",
+            "defaultVolume": 80,
+            "xml": "192.168.178.80/sc2_val.xml"
+        }
+    ]
