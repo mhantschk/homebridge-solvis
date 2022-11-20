@@ -1,0 +1,14 @@
+{
+  "name": "homebridge-solvis",
+  "version": "0.0.1",
+  "description": "Description for Homebridge Tutorial",
+  "license": "",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "engines": {
+    "node": ">=10.17.0",
+    "homebridge": ">=0.4.8"
+  },
+  "dependencies": {}
+}
