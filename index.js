@@ -110,12 +110,12 @@ solvistemp.prototype = {
                 
         callback(null);
     },
-    updateUI: function () {
+   /* updateUI: function () {
         setTimeout( () => {
             this.bulb.getCharacteristic(Characteristic.Brightness).updateValue(this.vol);
             this.bulb.getCharacteristic(Characteristic.On).updateValue(this.vol>0);
         }, 100);
-    },
+    },*/
     getVolume: function (callback) {
         this.log('getVolume')
 
@@ -131,7 +131,7 @@ solvistemp.prototype = {
 
         callback(null);
     },
-    poll: function() {
+  /*  poll: function() {
         if(this.timer) clearTimeout(this.timer);
         this.timer = null;
 
@@ -142,5 +142,5 @@ solvistemp.prototype = {
         });
 
         this.timer = setTimeout(this.poll.bind(this), this.refreshInterval)
-    }
+   */ }
 }
