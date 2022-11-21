@@ -34,7 +34,7 @@ function solvistemp(log, config, api) {
         .on("get", this.getTemperature.bind(this))
     
     // polling
-    this.timer = setTimeout(this.poll.bind(this), this.refreshInterval);
+ //   this.timer = setTimeout(this.poll.bind(this), this.refreshInterval);
 };
 
 solvistemp.prototype = {
