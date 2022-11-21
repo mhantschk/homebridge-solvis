@@ -2,10 +2,8 @@
 
 // declare variables for easy access to often-used long-named variables
 let Service, Characteristic;
-const http = require('http');   // HTTP POST / GET method.
-const bent = require('bent');
+var needle = require('needle');
 const { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } = require('constants');
-var request = require("request");
 
 module.exports = function (homebridge) {
 
@@ -51,14 +49,10 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
       
-        var post = bent('http://solvis:solvis@192.168.178.80','GET','string');
-        this.log(post);
-        var post = bent('http://solvis:solvis@192.168.178.80/sc2.val.xml','GET','string');
-        this.log(post);
-        var getStream = bent('http://solvis:solvis@192.168.178.80');
-        let stream = getStream('/sc2_val.xml');
-        //const obj = await stream.json();
-        this.log(stream);
+        needle.get('http://www.google.com', function(error, response) {
+  if (!error && response.statusCode == 200)
+    this.log(response.body);
+});
         
         
         //const str = await stream.text();
