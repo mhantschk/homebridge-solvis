@@ -51,9 +51,10 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         const getStream = bent(this.xml);
-        const obj = await stream.json()
+        let stream = await getStream('/json.api');
+        const obj = await stream.json();
         this.log(obj);
-        const str = await stream.text()
+        const str = await stream.text();
         this.log(str);
 //        let req = http.get(this.xml, res => {
 //            let recv_data = '';
