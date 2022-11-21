@@ -49,11 +49,11 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         this.log(this.xml);
-        needle.get(this.xml, function(error, response, body) {
+        needle.get(this.xml, { username: 'solvis', password: 'solvis' }, function(error, response, body) {
 //  if (!error && response.statusCode == 200)
-    console.log(response);
+    //console.log(response);
     console.log(body);
-    console.log(response.body);
+    //console.log(response.body);
 });
         
         callback(null,'test');
