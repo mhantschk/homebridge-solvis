@@ -22,7 +22,7 @@ function solvistemp(log, config, api) {
     this.name = config.name;
     this.sensor = config.solvissensor;
     this.xml = config.xml;
-  
+    this.log(config.xml);
     if (this.config.refreshInterval)
         this.refreshInterval = this.config.refreshInterval;
     else
@@ -39,13 +39,13 @@ function solvistemp(log, config, api) {
 
 solvistemp.prototype = {
     getServices: function() {
-        if (!this.bulb) return [];
+        if (!this.tempsens) return [];
         const infoService =  
             new Service.AccessoryInformation();
         infoService
             .setCharacteristic(Characteristic.Manufacturer,
                 'SensMan')
-        return [infoService, this.bulb];
+        return [infoService, this.tempsens];
     },    
     getTemperature: function(callback) {
         this.log('getTemperature');
