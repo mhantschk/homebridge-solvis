@@ -130,8 +130,8 @@ solvistemp.prototype = {
         this.triggeredby = 'slider';
 
         callback(null);
-    },
-  /*  poll: function() {
+    }/*,
+     poll: function() {
         if(this.timer) clearTimeout(this.timer);
         this.timer = null;
 
@@ -142,5 +142,5 @@ solvistemp.prototype = {
         });
 
         this.timer = setTimeout(this.poll.bind(this), this.refreshInterval)
-   */ }
+    } */
 }
