@@ -49,8 +49,8 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         this.log(needle.get);
-        needle.get('http://www.google.com', function(error, response) {
-            
-        });
-        callback(null,response.body)
+        needle.get('http://www.google.com', function(err, resp, body) {
+  // you'll get a nice object containing the nodes in the RSS
+});
+        callback(null,'test')
     }}
