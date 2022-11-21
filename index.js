@@ -53,13 +53,13 @@ solvistemp.prototype = {
         
         let req = http.get(this.xml, res => {
             let recv_data = '';
-//            res.on('data', chunk => { recv_data += chunk});
+              res.on('data', chunk => { recv_data += chunk});
 //            res.on('end', () => {
                 // recv_data contains volume info.
 //                let vol = JSON.parse(recv_data).volume; // vol = [0,100]
 //                this.log('Read from Sonos; volume: ' + vol);
 //                this.vol = vol;
-                  this.log(res);
+                  this.log(recv_data);
 //                callback(null, this.vol > 0);
           
  //           });
