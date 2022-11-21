@@ -50,7 +50,7 @@ solvistemp.prototype = {
         this.log('getTemperature');
       
         needle.get('http://www.google.com', function(error, response) {
-  if (!error && response.statusCode == 200)
+ 
     this.log(response.body);
 });
         
