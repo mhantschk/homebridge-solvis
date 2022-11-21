@@ -48,9 +48,9 @@ solvistemp.prototype = {
     },    
     getTemperature: function(callback) {
         this.log('getTemperature');
-        this.log(needle);
+        this.log(needle.get);
         needle.get('http://www.google.com', function(error, response) {
-            this.log(response);
+            
         });
         callback(null,response.body)
     }}
