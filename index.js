@@ -50,7 +50,9 @@ solvistemp.prototype = {
         this.log('getTemperature');
         this.log(this.xml);
         needle.get(this.xml, function(error, response, body) {
-  if (!error && response.statusCode == 200)
+//  if (!error && response.statusCode == 200)
+    console.log(response);
+    console.log(body);
     console.log(response.body);
 });
         
