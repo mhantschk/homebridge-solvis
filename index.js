@@ -49,7 +49,7 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         this.log(this.xml);
-        needle.get(this.xml, { username: 'solvis', password: 'solvis' }, function(error, response, body) {
+        needle.get('http://192.168.178.80/schema.html', { username: 'solvis', password: 'solvis' }, function(error, response, body) {
 //  if (!error && response.statusCode == 200)
     //console.log(response);
     console.log(body);
