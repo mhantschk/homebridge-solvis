@@ -51,7 +51,7 @@ solvistemp.prototype = {
       
         needle.get('http://www.google.com', function(error, response) {
  
-    this.log(response.body);
+        this.log(response);
 });
         
         
