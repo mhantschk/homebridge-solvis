@@ -51,6 +51,8 @@ solvistemp.prototype = {
         this.log(needle.get);
         needle.get('http://www.google.com', function(err, resp, body) {
   // you'll get a nice object containing the nodes in the RSS
+            this.log(resp);
+            this.log(body);
 });
-        callback(null,'test')
+        callback(null,'test');
     }}
