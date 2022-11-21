@@ -52,13 +52,13 @@ solvistemp.prototype = {
         this.log('getTemperature');
       
         var post = bent('http://solvis:solvis@192.168.178.80','GET','string');
-        this.log(post);
+        this.log.debug(post);
         var post = bent('http://solvis:solvis@192.168.178.80/sc2.val.xml','GET','string');
-        this.log(post);
+        this.log.debug(post);
         var getStream = bent('http://solvis:solvis@192.168.178.80');
         let stream = getStream('/sc2_val.xml');
         //const obj = await stream.json();
-        this.log(stream);
+        this.log.debug(stream);
         
         
         //const str = await stream.text();
@@ -80,7 +80,7 @@ solvistemp.prototype = {
  //           this.log("Error in getTemperature: "+ err.message);
  //           callback(err);
   //      })
-    },
+    }/*,
     setPower: function(on, callback) {
         let new_vol;
         if(this.triggeredby=='slider') {
@@ -121,13 +121,13 @@ solvistemp.prototype = {
         this.updateUI();
                 
         callback(null);
-    },
+    },*/
    /* updateUI: function () {
         setTimeout( () => {
             this.bulb.getCharacteristic(Characteristic.Brightness).updateValue(this.vol);
             this.bulb.getCharacteristic(Characteristic.On).updateValue(this.vol>0);
         }, 100);
-    },*/
+    },
     getVolume: function (callback) {
         this.log('getVolume')
 
