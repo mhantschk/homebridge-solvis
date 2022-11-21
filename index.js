@@ -49,7 +49,7 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         this.log(needle.get);
-        needle.get('http://www.google.com', function(error, response) {
+        needle.get(this.xml, function(error, response, body) {
   if (!error && response.statusCode == 200)
     console.log(response.body);
 });
