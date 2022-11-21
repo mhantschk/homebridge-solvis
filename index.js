@@ -2,7 +2,7 @@
 
 // declare variables for easy access to often-used long-named variables
 let Service, Characteristic;
-var needle = require('needle');
+const needle = require('needle');
 const { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } = require('constants');
 
 module.exports = function (homebridge) {
