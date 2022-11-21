@@ -52,13 +52,13 @@ solvistemp.prototype = {
         this.log('getTemperature');
       
         var post = bent('http://solvis:solvis@192.168.178.80','GET','string');
-        this.log.debug(post);
+        this.log(post);
         var post = bent('http://solvis:solvis@192.168.178.80/sc2.val.xml','GET','string');
-        this.log.debug(post);
+        this.log(post);
         var getStream = bent('http://solvis:solvis@192.168.178.80');
         let stream = getStream('/sc2_val.xml');
         //const obj = await stream.json();
-        this.log.debug(stream);
+        this.log(stream);
         
         
         //const str = await stream.text();
