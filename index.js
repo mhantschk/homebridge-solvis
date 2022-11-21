@@ -136,7 +136,7 @@ solvistemp.prototype = {
         this.timer = null;
 
         // volume update from Sonos
-        this.getPower( (err, poweron) => {  //this.vol updated.
+        this.getTemperature( (err, poweron) => {  //this.vol updated.
             // update UI
             this.updateUI();
         });
