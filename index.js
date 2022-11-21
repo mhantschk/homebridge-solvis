@@ -3,6 +3,7 @@
 // declare variables for easy access to often-used long-named variables
 let Service, Characteristic;
 const http = require('http');   // HTTP POST / GET method.
+const bent = require('bent');
 const { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } = require('constants');
 var request = require("request");
 
@@ -49,17 +50,20 @@ solvistemp.prototype = {
     },    
     getTemperature: function(callback) {
         this.log('getTemperature');
-
-        
-        let req = http.get(this.xml, res => {
-            let recv_data = '';
-              res.on('data', chunk => { recv_data += chunk});
+        const getStream = bent(this.xml);
+        const obj = await stream.json()
+        this.log(obj);
+        const str = await stream.text()
+        this.log(str);
+//        let req = http.get(this.xml, res => {
+//            let recv_data = '';
+//              res.on('data', chunk => { recv_data += chunk});
 //            res.on('end', () => {
                 // recv_data contains volume info.
 //                let vol = JSON.parse(recv_data).volume; // vol = [0,100]
 //                this.log('Read from Sonos; volume: ' + vol);
 //                this.vol = vol;
-                  this.log(recv_data);
+//                  this.log(recv_data);
 //                callback(null, this.vol > 0);
           
  //           });
