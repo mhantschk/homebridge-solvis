@@ -51,7 +51,7 @@ solvistemp.prototype = {
         this.log(this.xml);
         needle.get('http://192.168.178.80', function(error, response) {
 //  if (!error && response.statusCode == 200)
-    //console.log(response);
+    console.log(error);
     console.log(response.body);
     //console.log(response.body);
 });
