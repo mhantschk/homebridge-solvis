@@ -51,7 +51,7 @@ solvistemp.prototype = {
         this.log(this.xml);
         needle.get('http://solvis:solvis@solvisremote-576839.qrr9tjqalkqynuff.myfritz.net/', function(error, response) {
 //  if (!error && response.statusCode == 200)
-    console.log(error);
+    
     console.log(response.body);
     //console.log(response.body);
 });
