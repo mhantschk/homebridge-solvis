@@ -68,7 +68,7 @@ solvistemp.prototype = {
 //                callback(null, this.vol > 0);
           
  //           });
-        });
+ //       });
         req.on('error', err => {
             this.log("Error in getTemperature: "+ err.message);
             callback(err);
