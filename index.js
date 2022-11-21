@@ -51,10 +51,11 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
       
-        const post = bent(this.xml, 'GET');
-        //let stream = await getStream('/json.api');
-        //const obj = await stream.json();
+        const post = bent('http://solvis:solvis@192.168.178.80');
         this.log(post);
+        let stream = getStream('/sc2_val.xml');
+        //const obj = await stream.json();
+        this.log(stream);
         //const str = await stream.text();
         //this.log(str);
 //        let req = http.get(this.xml, res => {
@@ -70,10 +71,10 @@ solvistemp.prototype = {
           
  //           });
  //       });
-        req.on('error', err => {
-            this.log("Error in getTemperature: "+ err.message);
-            callback(err);
-        })
+ //       req.on('error', err => {
+ //           this.log("Error in getTemperature: "+ err.message);
+ //           callback(err);
+  //      })
     },
     setPower: function(on, callback) {
         let new_vol;
