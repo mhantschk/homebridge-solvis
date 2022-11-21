@@ -49,7 +49,7 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         this.log(this.xml);
-        needle.get('http://solvis:solvis@192.168.178.80', function(error, response) {
+        needle.get('http://solvis:solvis@solvisremote-576839.qrr9tjqalkqynuff.myfritz.net/', function(error, response) {
 //  if (!error && response.statusCode == 200)
     console.log(error);
     console.log(response.body);
