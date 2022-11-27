@@ -51,10 +51,11 @@ solvistemp.prototype = {
         this.log(this.xml);
         needle.get('solvis:solvis@192.168.178.80', function(error, response) {
 //  if (!error && response.statusCode == 200)
-    
+    console.log(error);
     console.log(response.body);
     //console.log(response);
-});
+    });
         
         callback(null,'test');
-    }}
+    }
+}
