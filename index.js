@@ -2,8 +2,12 @@
 
 // declare variables for easy access to often-used long-named variables
 let Service, Characteristic;
-const needle = require('needle');
-const http = require('http');
+     const httpClient = require("urllib");
+
+const user = "solvis";
+const pass = "solvis";
+
+const uri = "http://192.168.178.80;
 const { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } = require('constants');
 
 module.exports = function (homebridge) {
@@ -51,24 +55,20 @@ solvistemp.prototype = {
         this.log('getTemperature');
         this.log(this.xml);
         
-        var options = {
-             hostName: '192.168.178.80',
-            path: '/schema.html',
-            headers: {
-        
-                'Authorization': 'Basic ' + Buffer.from('solvis:solvis').toString('base64')
-        
-            }},
-        
-        http.request({options}, function(error, res) {
-//  if (!error && res.statusCode == 200)
-    console.log(error);
-            console.log('----------------------------------------------------');
-            console.log(error.statusCode);
-    console.log(res.statusCode);
-    //console.log(response);
-    });
-        
-        callback(null,'test');
-    }
-}
+   
+options = {
+  method: "GET",
+  rejectUnauthorized: false,
+  digestAuth: `${user}:${pass}`,
+};
+
+httpClient.request(uri, options, function (err, data, res) {
+  if (err) {
+    throw err; // you need to handle error
+  }
+  console.log(res.statusCode);
+  console.log(res.headers);
+  // data is Buffer instance
+  console.log(data.toString());
+});
+   }
