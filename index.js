@@ -7,7 +7,7 @@ let Service, Characteristic;
 const user = "solvis";
 const pass = "solvis";
 
-const uri = "http://192.168.178.80;
+const uri = "http://192.168.178.80";
 const { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } = require('constants');
 
 module.exports = function (homebridge) {
