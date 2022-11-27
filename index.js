@@ -56,19 +56,20 @@ solvistemp.prototype = {
         this.log(this.xml);
         
    
-options = {
-  method: "GET",
-  rejectUnauthorized: false,
-  digestAuth: `${user}:${pass}`,
-};
+          options = {
+               method: "GET",
+               rejectUnauthorized: false,
+               digestAuth: `${user}:${pass}`,
+          };
 
-httpClient.request(uri, options, function (err, data, res) {
-  if (err) {
-    throw err; // you need to handle error
-  }
-  console.log(res.statusCode);
-  console.log(res.headers);
-  // data is Buffer instance
-  console.log(data.toString());
-});
+          httpClient.request(uri, options, function (err, data, res) {
+               if (err) {
+                    throw err; // you need to handle error
+               }
+               console.log(res.statusCode);
+               console.log(res.headers);
+               // data is Buffer instance
+               console.log(data.toString());
+          });
    }
+}
