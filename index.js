@@ -52,7 +52,7 @@ solvistemp.prototype = {
         this.log(this.xml);
         
         const options = {
-    hostName: '192.168.178.80,
+    hostName: '192.168.178.80',
     path: '/schema.html',
     headers: {
         
