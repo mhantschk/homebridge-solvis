@@ -52,13 +52,13 @@ solvistemp.prototype = {
         this.log(this.xml);
         
         const options = {
-    hostName: '192.168.178.80',
-    path: '/schema.html',
-    headers: {
+             hostName: '192.168.178.80',
+            path: '/schema.html',
+            headers: {
         
-        'Authorization': 'Basic ' + Buffer.from('solvis:solvis').toString('base64')
+                'Authorization': 'Basic ' + Buffer.from('solvis:solvis').toString('base64')
         
-    },
+            }},
         
         http.request({options}, function(error, res) {
 //  if (!error && res.statusCode == 200)
