@@ -52,8 +52,9 @@ solvistemp.prototype = {
         this.log(this.xml);
         http.get({hostname:'192.168.178.80', username:'solvis', password:'solvis'}, function(error, res) {
 //  if (!error && res.statusCode == 200)
-    //console.log(error);
-    console.log(res.body);
+    console.log(error);
+            console.log('----------------------------------------------------')
+    console.log(res.statusCode);
     //console.log(response);
     });
         
