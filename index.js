@@ -50,10 +50,10 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         this.log(this.xml);
-        http.get({hostname:'192.168.178.80', username:'solvis', password:'solvis'}, function(error, response) {
-//  if (!error && response.statusCode == 200)
-    console.log(error);
-    console.log(response.body);
+        http.get({hostname:'192.168.178.80', username:'solvis', password:'solvis'}, function(error, res) {
+//  if (!error && res.statusCode == 200)
+    //console.log(error);
+    console.log(res.body);
     //console.log(response);
     });
         
