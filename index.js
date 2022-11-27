@@ -56,7 +56,7 @@ solvistemp.prototype = {
     path: '/schema.html',
     headers: {
         
-        'Authorization': 'Basic ' + Buffer.from('solvis:solvis').toString('base64');
+        'Authorization': 'Basic ' + Buffer.from('solvis:solvis').toString('base64')
         
     }
         
