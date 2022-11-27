@@ -50,7 +50,7 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         this.log(this.xml);
-        http.get({hostname:'192.168.178.80', path:'/schema.html', username:'solvis', password:'solvis'}, function(error, res) {
+        http.get({hostname:'192.168.178.80', path:'/schema.html', 'auth': 'solvis:solvis'}, function(error, res) {
 //  if (!error && res.statusCode == 200)
     console.log(error);
             console.log('----------------------------------------------------');
