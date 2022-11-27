@@ -56,7 +56,7 @@ solvistemp.prototype = {
         this.log(this.xml);
         
    
-          options = {
+         var options = {
                method: "GET",
                rejectUnauthorized: false,
                digestAuth: `${user}:${pass}`,
