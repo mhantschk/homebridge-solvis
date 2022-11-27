@@ -58,7 +58,7 @@ solvistemp.prototype = {
         
         'Authorization': 'Basic ' + Buffer.from('solvis:solvis').toString('base64')
         
-    }
+    },
         
         http.request({options}, function(error, res) {
 //  if (!error && res.statusCode == 200)
