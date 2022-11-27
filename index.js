@@ -51,7 +51,7 @@ solvistemp.prototype = {
         this.log('getTemperature');
         this.log(this.xml);
         
-        const options = {
+        var options = {
              hostName: '192.168.178.80',
             path: '/schema.html',
             headers: {
