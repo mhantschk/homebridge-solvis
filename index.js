@@ -72,5 +72,6 @@ solvistemp.prototype = {
                // data is Buffer instance
                console.log(data.toString());
           });
+         callback(null);
    }
 }
