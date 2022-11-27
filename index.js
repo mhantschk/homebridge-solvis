@@ -64,6 +64,7 @@ solvistemp.prototype = {
 
           httpClient.request(uri, options, function (err, data, res) {
                if (err) {
+                    console.log(err);
                     throw err; // you need to handle error
                }
                console.log(res.statusCode);
