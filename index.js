@@ -3,6 +3,7 @@
 // declare variables for easy access to often-used long-named variables
 let Service, Characteristic;
 const needle = require('needle');
+const http = require('http');
 const { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } = require('constants');
 
 module.exports = function (homebridge) {
@@ -49,7 +50,7 @@ solvistemp.prototype = {
     getTemperature: function(callback) {
         this.log('getTemperature');
         this.log(this.xml);
-        needle.get('solvis:solvis@192.168.178.80', function(error, response) {
+        http.get({hostname:'192.168.178.80', username:'solvis', password:'solvis'}, function(error, response) {
 //  if (!error && response.statusCode == 200)
     console.log(error);
     console.log(response.body);
