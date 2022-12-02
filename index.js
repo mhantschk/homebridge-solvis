@@ -70,7 +70,7 @@ solvistemp.prototype = {
                }
                console.log(response);
               // var jsonParsed = JSON.parse(res);
-              console.log(body);
+              console.log(body.name);
                
                // data is Buffer instance
                //console.log(data.toString());
