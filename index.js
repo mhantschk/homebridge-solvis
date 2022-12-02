@@ -62,14 +62,14 @@ solvistemp.prototype = {
               auth:'digest'
           };
 
-          needle.get(uri, options, function (err, data, res) {
+          needle.get(uri, options, { parse: 'xml' }, function(err, response, body) {
                if (err) {
                     console.log(err);
                     throw err; // you need to handle error
                }
-               console.log(res);
-               var jsonParsed = JSON.parse(res);
-               console.log(jsonParsed.Children[0].value);
+               console.log(response);
+              // var jsonParsed = JSON.parse(res);
+              console.log(body);
                
                // data is Buffer instance
                //console.log(data.toString());
