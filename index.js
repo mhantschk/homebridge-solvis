@@ -68,7 +68,7 @@ solvistemp.prototype = {
                     throw err; // you need to handle error
                }
                //console.log(data);
-               console.log(res);
+               console.log(res.string);
                // data is Buffer instance
                //console.log(data.toString());
           });
