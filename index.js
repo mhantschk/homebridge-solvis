@@ -68,7 +68,8 @@ solvistemp.prototype = {
                     throw err; // you need to handle error
                }
                console.log(res);
-               console.log(res.Children[0].value);
+               var jsonParsed = JSON.parse(res);
+               console.log(jsonParsed.Children[0].value);
                
                // data is Buffer instance
                //console.log(data.toString());
