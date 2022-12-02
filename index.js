@@ -6,7 +6,7 @@ let Service, Characteristic;
 
 const user = 'solvis';
 const pass = 'solvis';
-const uri = 'http://192.168.178.80';
+const uri = 'http://192.168.178.80/sc2_val.xml';
 const path='/sc2_val.xml';
 
 
