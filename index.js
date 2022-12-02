@@ -59,10 +59,11 @@ solvistemp.prototype = {
          var options = {
                username:'solvis',
               password:'solvis',
-              auth:'digest'
+              auth:'digest',
+              parse: 'xml'
           };
 
-          needle.get(uri, options, { parse: 'xml' }, function(err, response, body) {
+          needle.get(uri, options, function(err, response, body) {
                if (err) {
                     console.log(err);
                     throw err; // you need to handle error
