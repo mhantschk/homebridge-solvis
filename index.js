@@ -7,6 +7,7 @@ let Service, Characteristic;
 const user = 'solvis';
 const pass = 'solvis';
 const uri = 'http://192.168.178.80';
+const path='/sc2_val.xml';
 
 
 module.exports = function (homebridge) {
@@ -67,7 +68,7 @@ solvistemp.prototype = {
                     throw err; // you need to handle error
                }
                console.log(data);
-               console.log(res);
+               //console.log(res);
                // data is Buffer instance
                //console.log(data.toString());
           });
