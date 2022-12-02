@@ -2,13 +2,12 @@
 
 // declare variables for easy access to often-used long-named variables
 let Service, Characteristic;
-     const httpClient = require("urllib");
+     const needle = require("needle");
 
-const user = "solvis";
-const pass = "solvis";
+const user = 'solvis';
+const pass = 'solvis';
+const uri = 'http://192.168.178.80';
 
-const uri = "http://192.168.178.80";
-const { SSL_OP_NO_SESSION_RESUMPTION_ON_RENEGOTIATION } = require('constants');
 
 module.exports = function (homebridge) {
 
@@ -57,12 +56,12 @@ solvistemp.prototype = {
         
    
          var options = {
-               method: "GET",
-               rejectUnauthorized: false,
-               digestAuth: `${user}:${pass}`,
+               username:'solvis',
+              password:'solvis',
+              auth:'digest'
           };
 
-          httpClient.request(uri, options, function (err, data, res) {
+          needle.get(uri, options, function (err, data, res) {
                if (err) {
                     console.log(err);
                     throw err; // you need to handle error
